@@ -14,10 +14,10 @@
 - 在图二界面设置组件的数据源，及相关配置。
 
 ### 数据源设置
-- 数据源格式说明：必须是对象数组，如 2 所示。
+- 数据源格式说明：视频来源的格式只能是 video/ogg video/mp4 video/webm，如 2 所示。
 ```
-视频来源的格式只能是 video/ogg video/mp4 video/webm
 1. 'https://enhancer.io/video/1.mp4'  【必须】url字符串
+或
 2.  {
       "rows": [{"video": "https://enhancer.io/video/1.mp4"}]
     }
