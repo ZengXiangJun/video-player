@@ -16,111 +16,50 @@
 ### 数据源设置
 - 数据源格式说明：必须是对象数组，如 2 所示。
 ```
-[{
-    "A": 1,           【必须】键 A B C 表示表头，1 2 3 表示第一行数据
-    "B": 2,
-    "C": 3,
-    ...               【可扩展】其它的表头
-}, {                  【可扩展】递增行数据
-    "A": 11,
-    "B": 22,
-    "C": 33
-}]
+视频来源的格式只能是 video/ogg video/mp4 video/webm
+1. 'https://enhancer.io/video/1.mp4'  【必须】url字符串
+2.  {
+      "rows": [{"video": "https://enhancer.io/video/1.mp4"}]
+    }
 ```
 
 ### 组件功能
-- 将数据导出为Excel
-- 将Excel导入并解析为多种格式数据
-- 可通过页面简单修改Excel文件
+通过url生成视频播放组件
 
 
 ### 可用事件说明
-#### 加载Excel（On Excel Loaded）
-- 【事件 ID】onExcelLoaded
-- 【触发时机】Excel加载到页面上时。
+#### 视频载入（on Video Ready）
+- 【事件 ID】onVideoReady
+- 【触发时机】视频载入时
 
-#### 导出Excel（onExcelOutputed）
-- 【事件 ID】onExcelOutputed
-- 【触发时机】导出Excel时。
+#### 视频播放（On Video Start）
+- 【事件 ID】onVideoStart
+- 【触发时机】视频播放时
 
-#### 单击表格（On Sheet Click）
-- 【事件 ID】onSheetClick
-- 【触发时机】单击页面上表格时。
+#### 视频暂停（On Video Stop）
+- 【事件 ID】onVideoStop
+- 【触发时机】视频暂停时
 
+#### 视频结束（On Video End）
+- 【事件 ID】onVideoEnd
+- 【触发时机】视频结束时
 
-#### 单元格获得焦点（On Cell Focus）
-- 【事件 ID】onCellFocus
-- 【触发时机】页面表格单元获得焦点时（编辑）。
-
-#### 单元格失去焦点 （On Cell Blur）
-- 【事件 ID】onCellBlur
-- 【触发时机】页面表格失去焦点时。
-
-### 可用变量说明 [Demo](http://47.96.99.14:5301/#105)
-#### EXCEL_DATA
-- 【类型】object
-- 【说明】Excel数据
-- 【示例】{'SheetNames': [], 'Sheets': {}}
-
-#### SHEET_NAMES
-- 【类型】array
-- 【说明】Excel中所有表名称
-- 【示例】['sheet1', 'sheet2']
-
-#### SHEETS
-- 【类型】object
-- 【说明】所有表数据
-- 【示例】{'sheet1': {}, 'sheet2': {}}
-
-#### SHEETS_TO_CSV
-- 【类型】object
-- 【说明】所有表CSV格式数据
-- 【示例】{'sheet1': ''}
-
-#### SHEETS_TO_JSON
-- 【类型】object
-- 【说明】所有表JSON格式数据
-- 【示例】{'sheet1': []}
-
-#### SHEETS_TO_FORMULAE
-- 【类型】object
-- 【说明】所有表FORMULAE格式数据
-- 【示例】{'sheet1': []}
-
-#### CURR_SHEET_NAME
-- 【类型】string
-- 【说明】当前表名称
-- 【示例】"表-1"
-
-#### CURR_SHEET
-- 【类型】object
-- 【说明】当前表数据
-- 【示例】{!ref: ''}
-
-#### CURR_SHEET_TO_JSON
-- 【类型】array
-- 【说明】当前表JSON格式数据
-- 【示例】[{}, {}]
-
-#### CURR_SHEET_ROWS
+### 可用变量说明 [Demo](http://47.96.99.14:5301/#115)
+#### CURR_TIME
 - 【类型】number
-- 【说明】当前表行数（不包括表头）
+- 【说明】当前播放时间（秒）
 - 【示例】10
 
-#### CURR_SHEET_COLS
+#### DURATION
 - 【类型】number
-- 【说明】当前表列数
-- 【示例】10
+- 【说明】视频总时间
+- 【示例】47
 
-#### CURR_CELL_POS
+#### SRC
 - 【类型】string
-- 【说明】当前单元格位置（包括表头， 同Excel中单元格位置）
-- 【示例】"A1"
+- 【说明】视频来源
+- 【示例】'https://enhancer.io/video/1.mp4'
 
-#### CURR_CELL_CONTENT
-- 【类型】string
-- 【说明】当前单元格内容
-- 【示例】"统计"
 
 
 ### 其它
