@@ -58,7 +58,7 @@
 #### SRC
 - 【类型】string
 - 【说明】视频来源
-- 【示例】'https://enhancer.io/video/1.mp4'
+- 【示例】"http://47.96.99.14/video.mp4"
 
 
 
