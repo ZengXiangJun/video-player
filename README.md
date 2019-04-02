@@ -1,6 +1,5 @@
 ## Enhancer三方组件 video-player 使用说明
-### 查看Demo 【账号】visit 【密码】111111
-### 简介 [Demo](http://47.96.99.14:5301/#114)
+### 简介
 - video-player是基于[Enhancer](https://enhancer.io)平台开发的组件, 能在此平台上良好运行。
 - video-player支持 video/ogg video/mp4 video/webm格式的HTML5视频播放组件。
 
@@ -44,7 +43,7 @@
 - 【事件 ID】onVideoEnd
 - 【触发时机】视频结束时
 
-### 可用变量说明 [Demo](http://47.96.99.14:5301/#115)
+### 可用变量说明
 #### CURR_TIME
 - 【类型】number
 - 【说明】当前播放时间（秒）
