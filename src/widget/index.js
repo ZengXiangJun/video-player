@@ -40,7 +40,11 @@ Enhancer.registerWidget({
                 data = '';
             }
             if (data.rows){
-                data = data.rows[0].video;
+                if (data.rows[0] && data.rows[0].video) {
+                    data = data.rows[0].video;
+                } else {
+                    data = '';
+                }
             }
             that.SRC = data;
             $container.html(tpl({
