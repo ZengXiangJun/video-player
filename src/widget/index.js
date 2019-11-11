@@ -58,6 +58,7 @@ Enhancer.registerWidget({
             that.trig('complete');
             var $video = $container.find('video');
             var video = $video[0];
+            console.log(video)
             video.autoplay = profile.autoplay;
             video.loop = profile.loop;
             video.muted = profile.muted;
