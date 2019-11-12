@@ -1,7 +1,7 @@
 {
   "name": "video-player",
-  "version": "0.0.2",
-  "configuratorVersion": "0.0.2",
+  "version": "0.0.3",
+  "configuratorVersion": "0.0.3",
   "description": "视频播放",
   "keywords": "",
   "author": {

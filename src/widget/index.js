@@ -66,7 +66,7 @@ Enhancer.registerWidget({
             $video.on('canplay', function() {
                 $container.find('#wait').css('display', 'none');
                 if (video.autoplay) {
-                    $container.find('#play').attr('class', 'fas fa-pause');
+                    $container.find('.play').attr('class', 'fas fa-pause');
                 }
                 isReady = true;
                 that.trig('onVideoReady');
@@ -75,10 +75,10 @@ Enhancer.registerWidget({
             $container.on('click', '.videoWrap', function() {
                 if (video.paused) {
                     video.play();
-                    $container.find('#play').attr('class', 'fas fa-pause');
+                    $container.find('.play').attr('class', 'fas fa-pause');
                 } else {
                     video.pause();
-                    $container.find('#play').attr('class', 'fab fa-youtube');
+                    $container.find('.play').attr('class', 'fab fa-youtube');
                 }
             })
             //移出移入显示
@@ -88,10 +88,10 @@ Enhancer.registerWidget({
                     return
                 }
                 $container.find('.tool').slideDown(100);
-                $container.find('#play').show(100);
+                $container.find('.play').show(100);
                 show_t = setTimeout(function() {
                     $container.find('.tool').slideUp(100);
-                    $container.find('#play').hide(100);
+                    $container.find('.play').hide(100);
                     $container.find('.speedSelect').hide();
                 }, 4000)
             }
@@ -107,21 +107,21 @@ Enhancer.registerWidget({
                     return
                 }
                 $container.find('.tool').slideUp(100);
-                $container.find('#play').hide(100);
+                $container.find('.play').hide(100);
                 $container.find('.speedSelect').hide();
             })
             //播放
             $video.on('loadedmetadata', function() {
                 that.DURATION = video.duration;
-               $('#duration').text(formatSeconds(video.duration));
+               $container.find('#duration').text(formatSeconds(video.duration));
             });
             $video.on('timeupdate', function() {
                 that.CURR_TIME = video.currentTime;
-               $('#current').text(formatSeconds(video.currentTime));
+               $container.find('#current').text(formatSeconds(video.currentTime));
                var currentPos = video.currentTime;
                var maxduration = video.duration;
                var percentage = 100 * currentPos / maxduration;
-               $('#timeBar').css('width', percentage+'%');
+               $container.find('#timeBar').css('width', percentage+'%');
             });
             var timeDrag = false;
             $container.find('.process').mousedown(function(e) {
@@ -139,7 +139,7 @@ Enhancer.registerWidget({
                if(percentage < 0) {
                   percentage = 0;
                }
-               $('#timeBar').css('width', percentage+'%');
+               $container.find('#timeBar').css('width', percentage+'%');
                video.currentTime = maxduration * percentage / 100;
             };
             //全屏显示
