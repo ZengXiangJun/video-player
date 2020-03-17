@@ -368,8 +368,8 @@ module.exports = function (env) {
       middleware: function(req, res, next) {
         const url = req.url.split('?')[0];
         if (req.method === 'POST') {
-          const name = req.url.match(/\?wname=([^&]+)/)[1];
-          if (name != 'video-player') {
+          const name = req.url.match(/\?wname=([^&]+)/);
+          if (name && name[1] != 'video-player') {
             return res.end(JSON.stringify({success: false}))
           }
         }
