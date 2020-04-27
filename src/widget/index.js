@@ -87,10 +87,11 @@ Enhancer.registerWidget({
                 if (!isReady) {
                     return
                 }
-                $container.find('.tool').slideDown(100);
+                $container.find('.tool').show(100);
                 $container.find('.play').show(100);
                 show_t = setTimeout(function() {
-                    $container.find('.tool').slideUp(100);
+                    $container.find('.tool').hide(100);
+
                     $container.find('.play').hide(100);
                     $container.find('.speedSelect').hide();
                 }, 4000)
@@ -106,7 +107,7 @@ Enhancer.registerWidget({
                 if (!isReady) {
                     return
                 }
-                $container.find('.tool').slideUp(100);
+                $container.find('.tool').hide(100);
                 $container.find('.play').hide(100);
                 $container.find('.speedSelect').hide();
             })
