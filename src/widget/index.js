@@ -45,7 +45,7 @@ Enhancer.registerWidget({
                 } else {
                     data = '';
                 }
-            }
+            };
             that.SRC = data;
             $container.html(tpl({
                 locale: locale(),
@@ -63,6 +63,7 @@ Enhancer.registerWidget({
             video.muted = profile.muted;
             //可播放时事件
             var isReady = false;
+
             $video.on('canplay', function() {
                 $container.find('#wait').css('display', 'none');
                 if (video.autoplay) {
