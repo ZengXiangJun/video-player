@@ -7,6 +7,7 @@ var configurator = {
             locale: locale()
         });
         $('body').html(tplHTML);
+
         $('#width,#height').blur(function() {
             var width = parseInt($('#width').val());
             var height = parseInt($('#height').val());
@@ -21,17 +22,20 @@ var configurator = {
                 $('#height').val(100)
             }
         })
+
     },
     setProfile: function(profile) {
         profile = $.extend({
             width: 100,
-            height: 80,
+            height: 100,
+            poster: false,
+            watermark: false,
             autoplay: false,
             loop: false,
-            muted: false,
-            fullScreen: true,
-            speed: true
+            mute: false,
+            audioOnly: false
         }, profile);
+
         var title = locale('title');
         var dataSpecification = locale('dataSpecification');
         if (profile.srcId) {
@@ -47,11 +51,12 @@ var configurator = {
         });
         $('#width').val(profile.width);
         $('#height').val(profile.height);
+        $('#poster').prop('checked', profile.poster);
+        $('#watermark').prop('checked', profile.watermark);
         $('#autoplay').prop('checked', profile.autoplay);
         $('#loop').prop('checked', profile.loop);
-        $('#muted').prop('checked', profile.muted);
-        $('#fullScreen').prop('checked', profile.fullScreen);
-        $('#speed').prop('checked', profile.speed);
+        $('#mute').prop('checked', profile.mute);
+        $('#audioOnly').prop('checked', profile.audioOnly);
     },
     getProfile: function() {
         var srcId = $('#dataWrap').attr('srcId');
@@ -62,11 +67,12 @@ var configurator = {
                 srcId: $('#dataWrap').attr('srcId'),
                 width: parseInt($('#width').val()),
                 height: parseInt($('#height').val()),
+                poster: $('#poster').prop('checked'),
+                watermark: $('#watermark').prop('checked'),
                 autoplay: $('#autoplay').prop('checked'),
                 loop: $('#loop').prop('checked'),
-                muted: $('#muted').prop('checked'),
-                fullScreen: $('#fullScreen').prop('checked'),
-                speed: $('#speed').prop('checked')
+                mute: $('#mute').prop('checked'),
+                audioOnly: $('#audioOnly').prop('checked'),
             }
         }
     },
@@ -76,33 +82,65 @@ var configurator = {
             'name': locale('onVideoReady'),
             'des': "Triggered when video ready"
         }, {
-            'id': 'onVideoStart',
-            'name': locale('onVideoStart'),
-            'des': "Triggered when video start"
+            'id': 'onVideoPlay',
+            'name': locale('onVideoPlay'),
+            'des': "Triggered when video play"
         }, {
-            'id': 'onVideoStop',
-            'name': locale('onVideoStop'),
-            'des': "Triggered when video stop"
+            'id': 'onVideoPause',
+            'name': locale('onVideoPause'),
+            'des': "Triggered when video Pause"
         }, {
             'id': 'onVideoEnd',
             'name': locale('onVideoEnd'),
             'des': "Triggered when video end"
+        }, {
+            'id': 'onVideoResize',
+            'name': locale('onVideoResize'),
+            'des': "Triggered when video Resize"
+        }, {
+            'id': 'onVideoSeek',
+            'name': locale('onVideoSeek'),
+            'des': "Triggered when video Seek"
+        }, {
+            'id': 'onVideoTimeUpdate',
+            'name': locale('onVideoTimeUpdate'),
+            'des': "Triggered when video time update"
+        }, {
+            'id': 'onVideoVolumeUpdate',
+            'name': locale('onVideoVolumeUpdate'),
+            'des': "Triggered when video volume update"
         }]
         return data;
     },
     getSupportedVariableList: function(profile) {
         return [{
-            name: 'CURR_TIME',
-            type: 'number',
-            des: locale('CURR_TIME')
+            name: 'SRC',
+            type: 'string',
+            des: locale('SRC')
         }, {
             name: 'DURATION',
             type: 'number',
             des: locale('DURATION')
         }, {
-            name: 'SRC',
+            name: 'CURR_TIME',
+            type: 'number',
+            des: locale('CURR_TIME')
+        }, {
+            name: 'VOLUME',
+            type: 'number',
+            des: locale('VOLUME')
+        }, {
+            name: 'POSTER',
             type: 'string',
-            des: locale('SRC')
+            des: locale('POSTER')
+        }, {
+            name: 'WATERMARK',
+            type: 'string',
+            des: locale('WATERMARK')
+        }, {
+            name: 'WATERMARKLINK',
+            type: 'string',
+            des: locale('WATERMARKLINK')
         }]
     },
     getDependentVariableList: function(profile) {

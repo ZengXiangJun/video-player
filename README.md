@@ -12,15 +12,15 @@ video-player 是基于 [无远平台][1]、[Clappr][2] 封装的 HTML5 视频播
 - video/webm
 
 数据源：
-- `src`：视频链接
-- `poster`：封面图片链接
-- `watermark`：水印图片链接
-- `watermarkLink`：水印链接
+- `src`：视频链接（必须）
+- `poster`：封面图片链接（非必须）
+- `watermark`：水印图片链接（非必须）
+- `watermarkLink`：水印链接（非必须）
 
 ```
 {
-	"src": "http://host/ocean.mp4",
-	"poster": "http://host/poster.png",
+	"src": "http://host/ocean.mp4", 
+	"poster": "http://host/poster.png", 
 	"watermark": "http://host/watermark.png",
 	"watermarkLink": "http://host"
 }
@@ -52,19 +52,19 @@ video-player 是基于 [无远平台][1]、[Clappr][2] 封装的 HTML5 视频播
 - 【事件 ID】onVideoEnd
 - 【触发时机】视频结束时
 
-#### 视频结束（On Video Resize）
+#### 播放器尺寸跳转（On Video Resize）
 - 【事件 ID】onVideoResize
 - 【触发时机】调整播放器窗口尺寸时
 
-#### 视频结束（On Video Seek）
+#### 调整播放时间（On Video Seek）
 - 【事件 ID】onVideoSeek
 - 【触发时机】调整播放时间时
 
-#### 视频结束（On Video Time Update）
+#### 播放时间变化（On Video Time Update）
 - 【事件 ID】onVideoTimeUpdate
 - 【触发时机】当前播放时间变化时
 
-#### 视频结束（On Video Time Volume Update）
+#### 调整播放音量（On Video Time Volume Update）
 - 【事件 ID】onVideoVolumeUpdate
 - 【触发时机】调整播放音量时
 
