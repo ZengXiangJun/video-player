@@ -52,7 +52,7 @@ video-player 是基于 [无远平台][1]、[Clappr][2] 封装的 HTML5 视频播
 - 【事件 ID】onVideoEnd
 - 【触发时机】视频结束时
 
-#### 播放器尺寸调整（On Video Resize）
+#### 调整播放器尺寸（On Video Resize）
 - 【事件 ID】onVideoResize
 - 【触发时机】调整播放器窗口尺寸时
 
