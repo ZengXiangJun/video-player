@@ -80,8 +80,9 @@ Enhancer.registerWidget({
                 },
                 onTimeUpdate: function() {
                     console.log('onTimeUpdate');
-                    console.log(this.getDuration())
-                    console.log(this.getCurrentTime())
+                    console.log(this.getDuration());
+                    console.log(this.getCurrentTime());
+                    console.log(this.this.getVolume());
                 },
                 onVolumeUpdate: function() {
                     console.log('onVolumeUpdate');
