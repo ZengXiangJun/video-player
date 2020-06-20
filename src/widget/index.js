@@ -209,7 +209,7 @@ Enhancer.registerWidget({
                 }else if(elem.requestFullScreen){  
                     elem.requestFullscreen();  
                 }  
-            }  
+            }
             var exitFullscreen=function(){  
                 var elem = $container.find('.outerWrap')[0];
                 if(elem.webkitCancelFullScreen){ 
@@ -221,7 +221,7 @@ Enhancer.registerWidget({
                 }else if(elem.exitFullscreen){  
                     elem.exitFullscreen();
                 }
-            } 
+            }
             function formatSeconds(seconds) {  
                 if (seconds > 0) {
                     var hours = Math.floor(seconds/3600);

@@ -6,7 +6,7 @@
 ### 生成界面
 ![](https://github.com/ZengXiangJun/video-player/blob/master/images/2.jpg)
 ### 配置界面
-![](https://github.com/ZengXiangJun/video-player/blob/master/images/1.png)
+![](./images/1.png)
 
 ### 使用说明
 - 在[Enhancer](https://enhancer.io)上注册，新建项目使用此组件。
