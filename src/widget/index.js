@@ -49,7 +49,7 @@ Enhancer.registerWidget({
             width: '100%',
             height: '100%',
             // autoPlay: true,
-            loop: true,
+            loop: false,
             mute: false,
             preload: 'metadata',
             audioOnly: false,
@@ -107,7 +107,6 @@ Enhancer.registerWidget({
 
 
         // console.log(Clappr);
-
 
     }
 });
