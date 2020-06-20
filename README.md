@@ -12,12 +12,25 @@ video-player 是基于 [无远平台][1]、[clappr][2] 封装的 HTML5 视频播
 - video/webm
 
 数据源：
+- `src`：视频链接
+- `poster`：封面图片链接
+- `watermark`：水印图片链接
+- `watermarkLink`：水印链接
+
 ```
-"https://enhancer.io/video/1.mp4"
+{
+	"src": "http://host/ocean.mp4",
+	"poster": "http://host/poster.png",
+	"watermark": "http://host/watermark.png",
+	"watermarkLink": "http://host"
+}
 
 {
 	"rows": [{
-		"video": "https://enhancer.io/video/1.mp4"
+		"src": "http://host/ocean.mp4",
+		"poster": "http://host/poster.png",
+		"watermark": "http://host/watermark.png",
+		"watermarkLink": "http://host"
 	}]
 }
 ```
