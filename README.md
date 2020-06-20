@@ -1,7 +1,7 @@
 ## Enhancer 三方组件 video-player 使用说明
 
 ### 简介
-video-player 是基于 [无远平台][1]、[clappr][2] 封装的 HTML5 视频播放组件。
+video-player 是基于 [无远平台][1]、[Clappr][2] 封装的 HTML5 视频播放组件。
 
 组件版本 `0.0.10` 及以下的文档见 `0.0.1` 分支。
 
