@@ -1,6 +1,6 @@
 ## Enhancer 三方组件 video-player 使用说明
 ### 简介
-video-player 是基于 [无远][1] 平台、[clappr][2] 封装的 HTML5 视频播放组件。
+video-player 是基于 [无远平台][1]、[clappr][2] 封装的 HTML5 视频播放组件。
 
 ### 数据源设置
 - 数据源格式说明：视频来源的格式只能是 video/ogg video/mp4 video/webm，如 2 所示。
