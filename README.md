@@ -1,16 +1,6 @@
-## Enhancer三方组件 video-player 使用说明
+## Enhancer 三方组件 video-player 使用说明
 ### 简介
-- video-player是基于[Enhancer](https://enhancer.io)平台开发的组件, 能在此平台上良好运行。
-- video-player支持 video/ogg video/mp4 video/webm格式的HTML5视频播放组件。
-
-### 生成界面
-![](https://github.com/ZengXiangJun/video-player/blob/master/images/2.jpg)
-### 配置界面
-![](./images/1.png)
-
-### 使用说明
-- 在[Enhancer](https://enhancer.io)上注册，新建项目使用此组件。
-- 在图二界面设置组件的数据源，及相关配置。
+video-player 是基于 [无远][1] 平台、[clappr][2] 封装的 HTML5 视频播放组件。
 
 ### 数据源设置
 - 数据源格式说明：视频来源的格式只能是 video/ogg video/mp4 video/webm，如 2 所示。
@@ -21,10 +11,6 @@
       "rows": [{"video": "https://enhancer.io/video/1.mp4"}]
     }
 ```
-
-### 组件功能
-通过url生成视频播放组件
-
 
 ### 可用事件说明
 #### 视频载入（on Video Ready）
@@ -58,6 +44,9 @@
 - 【类型】string
 - 【说明】视频来源
 
-### 其它
-- [Enhancer 教程](https://enhancer.io/tutorials)
-- [Enhancer 社区](https://forum.enhancer.io/#p=1&t=5)
+
+
+[1]: https://wuyuan.io/
+[2]: https://github.com/clappr/clappr
+
+
