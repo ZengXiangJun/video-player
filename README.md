@@ -91,17 +91,17 @@ video-player 是基于 [无远平台][1]、[Clappr][2] 封装的 HTML5 视频播
 #### POSTER
 - 【类型】string
 - 【说明】封面图片链接
-- 【示例】'http://host/poster.png'
+- 【示例】`http://host/poster.png`
 
 #### WATERMARK
 - 【类型】string
 - 【说明】水印图片链接
-- 【示例】'http://host/watermark.png'
+- 【示例】`http://host/watermark.png`
 
 #### WATERMARKLINK
 - 【类型】string
 - 【说明】水印链接
-- 【示例】'http://host/watermarkLink'
+- 【示例】`http://host/watermarkLink`
 
 [1]: https://wuyuan.io/
 [2]: https://github.com/clappr/clappr
