@@ -62,6 +62,9 @@ Enhancer.registerWidget({
                     data = {};
                 }
             };
+            if (typeof data === 'string') {
+                data = JSON.parse(data);
+            }
 
             that.SRC = data.src || '';
             that.POSTER = data.poster || '';
