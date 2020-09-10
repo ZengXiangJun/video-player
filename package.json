@@ -1,7 +1,7 @@
 {
   "name": "video-player",
-  "version": "0.0.15",
-  "configuratorVersion": "0.0.15",
+  "version": "0.0.17",
+  "configuratorVersion": "0.0.17",
   "description": "视频播放",
   "keywords": "",
   "author": {
@@ -51,6 +51,8 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1"
+    "@clappr/core": "^0.4.13",
+    "babel-preset-es2015": "^6.24.1",
+    "clappr": "^0.3.13"
   }
 }

@@ -1,7 +1,8 @@
 require('./index.less');
 var locale = require('./i18n');
 var tpl = require('./index.html');
-var Clappr = require('./clappr.min.js');
+var Clappr = require('clappr');
+// var Clappr = require('./clappr.min.js');
 Enhancer.registerWidget({
     construct: function(profile, zContext) {
         profile = $.extend({
