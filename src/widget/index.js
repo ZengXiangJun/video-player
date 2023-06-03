@@ -42,9 +42,11 @@ Enhancer.registerWidget({
         var $container = this.$container;
         var profile = this.profile;
         var that = this;
+        var video_id = 'video_' + (new Date()).getTime();
 
         $container.html(tpl({
-            locale: locale()
+            locale: locale(),
+            video_id: video_id
         })).addClass('video-player');
 
         $container.find('#player').css({
@@ -73,7 +75,7 @@ Enhancer.registerWidget({
             that.WATERMARKLINK = data.watermarkLink || '';
 
             var config = {
-                parentId: "#player",
+                parentId: '#' + video_id,
                 preload: 'metadata',
                 width: '100%',
                 height: '100%',
